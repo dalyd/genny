@@ -114,7 +114,7 @@ Actors:
       a: {^RandomInt: {min: 0, max: 1000000}}
       # Note that in the original workload the string c was perfectly compressable. We can put a
       # constant there if needed.
-      c: &string {^RandomString: {length: 50}}  # Adjust this so the doc comes out as 100 B.
+      c: &string {^RandomString: {length: 950}}  # Adjust this so the doc comes out as 100 B.
     Indexes:
     - keys: {id: 1}
     - keys: {a: 1}
