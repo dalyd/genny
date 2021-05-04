@@ -19,19 +19,19 @@ DocumentCount: &NumDocs 100000
 Clients:
   Default:
     QueryOptions:
-      maxPoolSize: 500
+      maxPoolSize: 2000
   Insert:
     QueryOptions:
-      maxPoolSize: 500
+      maxPoolSize: 2000
   Query:
     QueryOptions:
-      maxPoolSize: 500
+      maxPoolSize: 2000
   Remove:
     QueryOptions:
-      maxPoolSize: 500
+      maxPoolSize: 2000
   Update:
     QueryOptions:
-      maxPoolSize: 500
+      maxPoolSize: 2000
 
 ActorTemplates:
 - TemplateName: UpdateTemplate
@@ -156,29 +156,29 @@ Actors:
 - ActorFromTemplate:
     TemplateName: UpdateTemplate
     TemplateParameters:
-      Name: Update_16
-      Threads: 16
-      OnlyActiveInPhase: 4
-
-- ActorFromTemplate:
-    TemplateName: UpdateTemplate
-    TemplateParameters:
-      Name: Update_32
-      Threads: 32
-      OnlyActiveInPhase: 6
-
-- ActorFromTemplate:
-    TemplateName: UpdateTemplate
-    TemplateParameters:
       Name: Update_64
       Threads: 64
-      OnlyActiveInPhase: 8
+      OnlyActiveInPhase: 4
 
 - ActorFromTemplate:
     TemplateName: UpdateTemplate
     TemplateParameters:
       Name: Update_128
       Threads: 128
+      OnlyActiveInPhase: 6
+
+- ActorFromTemplate:
+    TemplateName: UpdateTemplate
+    TemplateParameters:
+      Name: Update_256
+      Threads: 256
+      OnlyActiveInPhase: 8
+
+- ActorFromTemplate:
+    TemplateName: UpdateTemplate
+    TemplateParameters:
+      Name: Update_512
+      Threads: 512
       OnlyActiveInPhase: 10
 
 #
@@ -194,29 +194,29 @@ Actors:
 - ActorFromTemplate:
     TemplateName: RemoveTemplate 
     TemplateParameters:
-      Name: Remove_16
-      Threads: 16
-      OnlyActiveInPhase: 4
-
-- ActorFromTemplate:
-    TemplateName: RemoveTemplate
-    TemplateParameters:
-      Name: Remove_32
-      Threads: 32
-      OnlyActiveInPhase: 6
-
-- ActorFromTemplate:
-    TemplateName: RemoveTemplate
-    TemplateParameters:
       Name: Remove_64
       Threads: 64
-      OnlyActiveInPhase: 8
+      OnlyActiveInPhase: 4
 
 - ActorFromTemplate:
     TemplateName: RemoveTemplate
     TemplateParameters:
       Name: Remove_128
       Threads: 128
+      OnlyActiveInPhase: 6
+
+- ActorFromTemplate:
+    TemplateName: RemoveTemplate
+    TemplateParameters:
+      Name: Remove_256
+      Threads: 256
+      OnlyActiveInPhase: 8
+
+- ActorFromTemplate:
+    TemplateName: RemoveTemplate
+    TemplateParameters:
+      Name: Remove_512
+      Threads: 512
       OnlyActiveInPhase: 10
 
 ## Insert Actors
@@ -231,29 +231,29 @@ Actors:
 - ActorFromTemplate:
     TemplateName: InsertTemplate 
     TemplateParameters:
-      Name: Insert_16
-      Threads: 16
-      OnlyActiveInPhase: 4
-
-- ActorFromTemplate:
-    TemplateName: InsertTemplate
-    TemplateParameters:
-      Name: Insert_32
-      Threads: 32
-      OnlyActiveInPhase: 6
-
-- ActorFromTemplate:
-    TemplateName: InsertTemplate
-    TemplateParameters:
       Name: Insert_64
       Threads: 64
-      OnlyActiveInPhase: 8
+      OnlyActiveInPhase: 4
 
 - ActorFromTemplate:
     TemplateName: InsertTemplate
     TemplateParameters:
       Name: Insert_128
       Threads: 128
+      OnlyActiveInPhase: 6
+
+- ActorFromTemplate:
+    TemplateName: InsertTemplate
+    TemplateParameters:
+      Name: Insert_256
+      Threads: 256
+      OnlyActiveInPhase: 8
+
+- ActorFromTemplate:
+    TemplateName: InsertTemplate
+    TemplateParameters:
+      Name: Insert_512
+      Threads: 512
       OnlyActiveInPhase: 10
 
 ## Find Actors
@@ -268,29 +268,29 @@ Actors:
 - ActorFromTemplate:
     TemplateName: FindTemplate 
     TemplateParameters:
-      Name: Find_16
-      Threads: 16
-      OnlyActiveInPhase: 4
-
-- ActorFromTemplate:
-    TemplateName: FindTemplate
-    TemplateParameters:
-      Name: Find_32
-      Threads: 32
-      OnlyActiveInPhase: 6
-
-- ActorFromTemplate:
-    TemplateName: FindTemplate
-    TemplateParameters:
       Name: Find_64
       Threads: 64
-      OnlyActiveInPhase: 8
+      OnlyActiveInPhase: 4
 
 - ActorFromTemplate:
     TemplateName: FindTemplate
     TemplateParameters:
       Name: Find_128
       Threads: 128
+      OnlyActiveInPhase: 6
+
+- ActorFromTemplate:
+    TemplateName: FindTemplate
+    TemplateParameters:
+      Name: Find_256
+      Threads: 256
+      OnlyActiveInPhase: 8
+
+- ActorFromTemplate:
+    TemplateName: FindTemplate
+    TemplateParameters:
+      Name: Find_512
+      Threads: 512
       OnlyActiveInPhase: 10
 
 AutoRun:
